@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname Switch
+hostname SW-PLANCK-MAIN
 !
 !
 !
@@ -30,9 +30,11 @@ interface FastEthernet0/4
 interface FastEthernet0/5
  switchport trunk allowed vlan 2-39,41-49,51-199,201-204,206-1001
  switchport mode trunk
+ switchport voice vlan 222
 !
 interface FastEthernet0/6
- switchport trunk allowed vlan 2-9,11-19,21-29,31-39,41-49,52-54,56-59,61-99,101-149,151-199,201-204,206-1001
+ switchport trunk allowed vlan 2-9,11-19,21-29,31-39,41-49,51-54,56-59,61-99,101-149,151-199,201-204,206-1001
+ switchport voice vlan 222
 !
 interface FastEthernet0/7
  switchport access vlan 205
@@ -45,6 +47,7 @@ interface FastEthernet0/8
 interface FastEthernet0/9
 !
 interface FastEthernet0/10
+ switchport voice vlan 222
 !
 interface FastEthernet0/11
 !
